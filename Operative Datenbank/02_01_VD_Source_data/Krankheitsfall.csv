@@ -1,0 +1,4 @@
+﻿TierID;Behandlungsgrund;Behandlungsdatum;Behandlung_abgeschlossen_am;meldepflichtige_Krankheit;Befund;Medikation;ArztID;Bemerkung
+4;Kienen Appetit;20.11.2022;23.11.2022;2;Vergiftung;Pillen Nr.1;3;
+5;Humpelt am rechten Bein;07.02.2023;20.02.2023;2;Verstauchung;Kompresse und Schmerzmittel;4;
+7;Hohe Temperatur;03.04.2023;17.04.2023;1;Lungenentzündung;Antibiotikatherapie;4;

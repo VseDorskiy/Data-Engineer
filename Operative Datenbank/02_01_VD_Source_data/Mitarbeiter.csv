@@ -1,0 +1,10 @@
+﻿PositionID;AnredeID;TitelID  ;GeschlechtMitarbeiterID;Vorname;Nachname;Strasse;Hausnummer;PLZID;Ort;NationalitaetID;Festnetznummer;Handynummer;E_Mail;Beschäftigt seit;Geburtsdatum;Geburtsort;SozialerStatusID;Bemerkungen
+1;1;2;2;Nancy;Davolio;Aachener Straße;57;1;Berlin;7;(206) 555-9857;(206) 555-9857;Nancy.Davolio@gmail.com;12.07.2010;08.12.1948;Seattle;2;
+2;2;1;1;Andrew;Fuller;Abbestraße;56;1;Berlin;7;(206) 555-9482;(206) 555-9482;Andrew.Fuller@gmail.com;30.12.2005;19.02.1952;Tacoma;2;
+1;1;1;2;Janet;Leverling;Adam-von-Trott-Straße;72;1;Berlin;7;(206) 555-3412;(206) 555-3412;Janet.Leverling@gmail.com;01.10.2020;30.08.1963;Kirkland;2;
+2;1;1;2;Margaret;Peacock;Adenauerplatz;41;1;Berlin;7;(206) 555-8122;(206) 555-8122;Margaret.Peacock@gmail.com;07.06.2022;19.09.1956;Redmond;2;
+2;2;1;1;Steven;Buchanan;Agathe-Lasch-Platz;14;4;Düsseldorf;7;(71) 555-4848;(71) 555-4848;Steven.Buchanan@gmail.com;01.06.2022;04.03.1955;London;2;
+2;2;1;1;Michael;Suyama;Ahornallee;1;5;Düsseldorf;3;(71) 555-7773;(71) 555-7773;Michael.Suyama@gmail.com;01.08.2008;02.07.1963;London;2;
+3;2;1;1;Robert;King;Ahrweilerstraße;2;6;Stutgart;3;(71) 555-5598;(71) 555-5598;Robert.King@gmail.com;01.09.2020;29.05.1960;London;2;
+3;1;1;2;Laura;Callahan;Akazienallee;12;6;Stutgart;2;(206) 555-1189;(206) 555-1189;Laura.Callahan@gmail.com;08.05.2017;09.01.1958;Seattle;2;
+3;1;4;2;Anne;Dodsworth;Aachener Straße;7;1;Berlin;2;(71) 555-4444;(71) 555-4444;Anne.Dodsworth@gmail.com;07.06.2011;27.01.1966;London;2;

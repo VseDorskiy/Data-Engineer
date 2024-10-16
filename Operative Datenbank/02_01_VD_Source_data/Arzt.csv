@@ -1,0 +1,7 @@
+﻿TitelID;AnredeID;Vorname;Nachname;Strasse;Hausnummer;PLZ;Ort;LandID;Telefonnummer;E_Mail;Bemerkung
+3;1;Jade;Koch;Imbergässlein;82;6618;Losone;8;6618-6618;Jade.Koch@gmail.com;
+3;2;Nael;Staub;Freie Strasse;193;7418;Losone;8;7418-7418;Nael.Staub@gmail.com;
+2;1;Malea;Hirschi;Wien-Strasse;25;2037;Rotterdam;5;2037-2037;Malea.Hirschi@gmail.com;
+2;2;Levin;Studer;Emil Angst-Strasse;119;6614;Barcelona;6;6614-6614;Levin.Studer@gmail.com;
+4;2;Nathan;Jost;St. Alban-Kirchrain;13;2616;London;3;2616-2616;Nathan.Jost@gmail.com;
+4;1;Elin;Wirz;Hirzbodenweg;63;1752;Leipzig;2;1752-1752;Elin.Wirz@gmail.com;

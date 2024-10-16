@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="C:\DE_Projekt\Source_data\Zoo.db" readonly="0" foreign_keys="1" case_sensitive_like="0" temp_store="0" wal_autocheckpoint="1000" synchronous="2"/><attached/><window><main_tabs open="structure browser pragmas query" current="3"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="150"/><column_width id="3" width="7052"/><column_width id="4" width="0"/><expanded_item id="0" parent="1"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><current_table name="4,14:mainKrankheitsfall"/><default_encoding codec=""/><browse_table_settings><table schema="main" name="Anrede" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="110"/><column index="2" value="143"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="Arzt" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="79"/><column index="2" value="81"/><column index="3" value="110"/><column index="4" value="103"/><column index="5" value="119"/><column index="6" value="233"/><column index="7" value="147"/><column index="8" value="61"/><column index="9" value="61"/><column index="10" value="86"/><column index="11" value="172"/><column index="12" value="264"/><column index="13" value="129"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="Einheiten_Gewicht_Tiere" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="229"/><column index="2" value="143"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="Fuetterung" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="2" value="76"/><column index="3" value="123"/><column index="4" value="109"/><column index="5" value="86"/><column index="6" value="91"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="Krankheitsfall" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="178"/><column index="2" value="76"/><column index="3" value="205"/><column index="4" value="209"/><column index="5" value="300"/><column index="6" value="282"/><column index="7" value="85"/><column index="8" value="124"/><column index="9" value="79"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="Mahlzeit_Futter" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="185"/><column index="2" value="123"/><column index="3" value="99"/><column index="4" value="80"/><column index="5" value="238"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="Mitarbeiter" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="2" value="117"/><column index="3" value="110"/><column index="4" value="81"/><column index="5" value="261"/><column index="6" value="103"/><column index="7" value="119"/><column index="8" value="213"/><column index="9" value="147"/><column index="10" value="73"/><column index="11" value="103"/><column index="12" value="167"/><column index="13" value="183"/><column index="14" value="162"/><column index="15" value="275"/><column index="16" value="169"/><column index="17" value="157"/><column index="18" value="121"/><column index="19" value="182"/><column index="20" value="154"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="Pflegetaetigkeit_Tier" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="153"/><column index="3" value="76"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="Positionen" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="117"/><column index="2" value="143"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="SozialerStatus" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="182"/><column index="2" value="143"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="Tiere" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="76"/><column index="2" value="136"/><column index="3" value="125"/><column index="4" value="92"/><column index="5" value="226"/><column index="6" value="95"/><column index="7" value="229"/><column index="8" value="157"/><column index="9" value="144"/><column index="10" value="135"/><column index="11" value="183"/><column index="12" value="102"/><column index="13" value="115"/><column index="14" value="129"/><column index="15" value="187"/><column index="16" value="105"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="Zuordnung_Arzt_Tier" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="229"/><column index="2" value="79"/><column index="3" value="76"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table></browse_table_settings></tab_browse><tab_sql><sql name="SELECT Tiere.sql">select Tiername, 
+	Geschlecht_Tiere.Bezeichnung, 
+	Groesse, Einheiten_Groesse_Tiere.Bezeichnung, 
+	Gewicht, Einheiten_Gewicht_Tiere.Bezeichnung,
+	Tierart.TierartBezeichnung, Gattung.GattungsBezeichnung
+	from Tiere
+join Geschlecht_Tiere on Geschlecht_Tiere.GeschlechtTierID  = Tiere.GeschlechtTierID 
+join Einheiten_Groesse_Tiere on Einheiten_Groesse_Tiere.EinheitGroesseTierID = Tiere.EinheitGroesseTierID
+join Einheiten_Gewicht_Tiere on Einheiten_Gewicht_Tiere.EinheitGewichtTierID = Tiere.EinheitGewichtTierID
+join Tierart on Tierart.TierartID = Tiere.TierartID
+join Gattung on Gattung.GattungID = Tierart.GattungID
+</sql><sql name="SELECT Mitarbieter.sql">select Titel.Bezeichnung AS Titel, Anrede.Bezeichnung AS Anrede, Vorname, Nachname, Positionen.Bezeichnung AS Position,
+		Mitarbeiter.Strasse, Hausnummer, Mitarbeiter.Ort, PLZ.PLZ 
+		from Mitarbeiter
+JOIN Titel On Titel.TitelID = Mitarbeiter.TitelID
+JOIN Anrede on Anrede.AnredeID = Mitarbeiter.AnredeID
+JOIN PLZ ON PLZ.PLZID = Mitarbeiter.PLZID
+JOIN Positionen on Positionen.PositionID = Mitarbeiter.PositionID
+</sql><sql name="SELECT Mitarbieter-Tier-Pflege.sql">SELECT --Mitarbeiter.Vorname, Mitarbeiter.Nachname, Positionen.Bezeichnung,
+	Tiere.Tiername, Tierart.TierartBezeichnung, count(Mitarbeiter.MitarbeiterID) as 'Anzahl der Mitarbeiter'
+from Pflegetaetigkeit_Tier
+join Mitarbeiter on Mitarbeiter.MitarbeiterID = Pflegetaetigkeit_Tier.MitarbeiterID
+join Tiere on Tiere.TierID = Pflegetaetigkeit_Tier.TierID
+Join Tierart on Tierart.TierartID = Tiere.TierartID
+join Positionen on Positionen.PositionID  = Mitarbeiter.PositionID
+group by Tiere.Tiername
+order by count(Mitarbeiter.MitarbeiterID) DESC</sql><sql name="SELECT Aerzte-Tiere.sql">SELECT Tiere.Tiername, Tierart.TierartBezeichnung, count(Zuordnung_Arzt_Tier.ArztID) as 'Anzahl der Ärzte'
+      --, Arzt.Vorname, Arzt.Nachname 
+FROM Arzt
+
+JOIN Zuordnung_Arzt_Tier on Zuordnung_Arzt_Tier.ArztID = Arzt.ArztID
+JOIN Tiere on Zuordnung_Arzt_Tier.TierID = Tiere.TierID
+JOIN Tierart on Tierart.TierartID = Tiere.TierartID
+GROUP BY Tiere.Tiername</sql><sql name="SELECT Tiere - Futter.sql">select distinct Tiere.Tiername, Tierart.TierartBezeichnung as Tierart, 
+Mahlzeit.Bezeichnung as Futter--Mahlzeit_Futter.Menge, Einheit_Futtermenge.Bezeichnung
+from Tiere
+
+JOIN Fuetterung on Tiere.TierID = Fuetterung.TierID
+JOIN Mahlzeit on Mahlzeit.MahlzeitID = Fuetterung.MahlzeitID
+Join Tierart on Tierart.TierartID = Tiere.TierartID
+join Mahlzeit_Futter on Mahlzeit_Futter.MahlzeitID = Mahlzeit.MahlzeitID
+join Einheit_Futtermenge on Einheit_Futtermenge.EinheitFuttermengeID = Mahlzeit_Futter.EinheitFuttermengeID
+</sql><sql name="SELECT Futter-Futterzutaten (Futtermischung).sql">select distinct --Tiere.Tiername, Tierart.TierartBezeichnung, Gattung.GattungsBezeichnung,
+Mahlzeit.Bezeichnung as Futtermischung, Mahlzeit_Futter.Menge, Einheit_Futtermenge.Bezeichnung as Einheit, 
+Futter.Bezeichnung as Futter, Futterarten.Futterartbezeichnung as Futterart
+from Fuetterung
+
+JOIN Tiere on Tiere.TierID = Fuetterung.TierID
+JOIN Mahlzeit on Mahlzeit.MahlzeitID = Fuetterung.MahlzeitID
+Join Tierart on Tierart.TierartID = Tiere.TierartID
+join Mahlzeit_Futter on Mahlzeit_Futter.MahlzeitID = Mahlzeit.MahlzeitID
+join Einheit_Futtermenge on Einheit_Futtermenge.EinheitFuttermengeID = Mahlzeit_Futter.EinheitFuttermengeID
+join Gattung on Gattung.GattungID = Tierart.GattungID
+join Futter on Futter.FutterID = Mahlzeit_Futter.FutterID
+join Futterarten on Futterarten.FutterartID = Futter.FutterartID
+WHERE Gattung.GattungsBezeichnung LIKE '%Großkatzen'</sql><sql name="SELECT Lieferant-Futter.sql">select Lieferanten.Firmenname, Futter.Bezeichnung as Futter, Futterarten.Futterartbezeichnung as Futterart,
+		Futter_Lieferanten.Menge, Einheit_Futtermenge.Bezeichnung as Einheit,
+		Futter_Lieferanten.'Preis_(EK)_netto', 
+		Futter_Lieferanten.Menge*Futter_Lieferanten.'Preis_(EK)_netto' as 'Gesamtpreis netto',
+		Waehrung.Bezeichnung as 'Währung', Futter_Lieferanten.Datum
+from Futter_Lieferanten
+
+join Futter on Futter.FutterID = Futter_Lieferanten.FutterID
+join Lieferanten on Lieferanten.LieferantenID = Futter_Lieferanten.LieferantenID
+join Futterarten on Futterarten.FutterartID = Futter.FutterartID
+join Einheit_Futtermenge on Einheit_Futtermenge.EinheitFuttermengeID = Futter_Lieferanten.EinheitFuttermengeID
+join Waehrung on Waehrung.WaehrungID = Futter_Lieferanten.WaehrungID
+WHERE Datum &gt; '2023-05-01'
+</sql><sql name="SELECT Tiere (Vater-Kinder).sql">SELECT Tier.Tiername as Vater, Tier.Geburtsdatum as 'Vater Geburtsdatum', 
+	Kind.Tiername as Kind, Kind.Geburtsdatum as 'Kind Geburtsdatum', 
+	Geschlecht_Tiere.Bezeichnung as 'Kind Geschlecht',
+	Tierart.TierartBezeichnung as Tierart
+	
+from Tiere as Tier
+join Tiere as Kind ON Tier.TierID = Kind.Vatertier
+join Tierart on Tierart.TierartID = Kind.TierartID
+join Geschlecht_Tiere on Geschlecht_Tiere.GeschlechtTierID = Kind.GeschlechtTierID</sql><sql name="SELECT Tiere-Krankheitsfall.sql">SELECT Tiere.Tiername,
+	Tierart.TierartBezeichnung as Tierart,
+	Tiere.Geburtsdatum,
+	Krankheitsfall.Behandlungsgrund,
+	Krankheitsfall.Behandlungsdatum, 
+	Krankheitsfall.Behandlung_abgeschlossen_am,
+	Krankheitsfall.Medikation,	
+	Titel.Bezeichnung as Titel, 
+	Arzt.Vorname, 
+	Arzt.Nachname
+FROM Krankheitsfall
+join Arzt on Arzt.ArztID = Krankheitsfall.ArztID
+join Tiere on Tiere.TierID = Krankheitsfall.TierID
+join Tierart on Tierart.TierartID = Tiere.TierartID
+join Titel on Titel.TitelID = Arzt.TitelID
+
+</sql><sql name="SELECT Tierehistorie-Krankheitsfall.sql">SELECT Tiere.Tiername,
+	Tierart.TierartBezeichnung as Tierart,
+	Ort, 
+	Land.Bezeichnung as Land,
+	von, 
+	bis,
+	Tiere.im_Zoo_seit,
+	Krankheitsfall.Behandlungsgrund, Behandlungsdatum,Behandlung_abgeschlossen_am
+FROM Tierhistorie
+join Tiere on Tiere.TierID = Tierhistorie.TierID
+join Land on Land.LandID = Tierhistorie.LandID
+join Tierart on Tierart.TierartID = Tiere.TierartID
+LEFT join Krankheitsfall on Krankheitsfall.TierID = Tiere.TierID
+;</sql><current_tab id="9"/></tab_sql></sqlb_project>

@@ -1,0 +1,14 @@
+﻿Tiernummer;Tiername;Groesse;EinheitGroesseTierID;Gewicht;EinheitGewichtTierID;Geburtsdatum;Sterbedatum;im_Zoo_seit;im_Zoo_geboren;Vatertier;Muttertier;Bemerkung;GeschlechtTierID;TierartID
+dlf1;Miro;2;2;80;2;20.07.2020;;20.07.2020;1;;;;1;1
+dlf2;Dori;1,5;2;70;2;03.10.2021;;03.10.2022;2;;;;2;1
+hai1;Baira;4;2;150;2;03.05.1990;;01.01.2023;2;;;;2;2
+lpd1;Gub_Vater;0,8;2;70;2;13.02.2020;;20.10.2022;2;;;;1;3
+lpd2;Gub_Mutter;0,7;2;60;2;13.10.2021;;13.10.2021;1;;;;2;3
+lpd3;Gub;0,6;2;50;2;20.07.2022;;20.07.2022;1;4;5;;1;3
+lw1;Alex_Vater;1,2;2;120;2;13.02.1995;;18.05.2020;2;;;;1;4
+lw2;Alex_Mutter;1;2;80;2;03.07.2002;;03.07.2002;1;;;;2;4
+lw3;Alex;0,7;2;65;2;14.06.2005;;14.06.2005;1;7;8;;1;4
+schlg1;Kaa;4;2;25;2;04.03.2013;;12.04.2021;2;;;;1;5
+schw1;Engel_Vater;0,7;2;3,7;2;03.08.2021;;17.02.2022;2;;;;1;6
+schw2;Engel_Mutter;0,6;2;3,5;2;17.02.2020;;17.02.2022;2;;;;2;6
+schw3;Engel;0,6;2;3;2;15.12.2022;;15.12.2020;1;11;12;;2;6
