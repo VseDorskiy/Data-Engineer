@@ -33,7 +33,7 @@ Repository Structure
 
 ├─ ERM-Schema                    # Entity-relationship model showing relationships among all parties
 
-├─ Projectpräsentation.pdf       # Presentation: objectives, tools, ERM schema, SQL warehouse, data migration, next steps
+├─ Project_Presentation.pdf       # Presentation: objectives, tools, ERM schema, SQL warehouse, data migration, next steps
 
 
 Main Files
@@ -46,10 +46,10 @@ Documented table descriptions, field meanings, and data types.
 - ERM-Schema
 Complete entity-relationship diagram showing all participants and relationships.
 
-- Projectpräsentation.pdf
+- Project_Presentation.pdf
 Explains scope, objectives, modelling decisions, ETL workflow, warehouse structure, data quality checks, and recommended next development steps.
 
 Usage Notes
 - SQL queries can be run directly from Zoo.sqbpro file.
-- ETL can be reproduced by executing Python scripts inside Python_Programms.
+- ETL can be reproduced by executing Python scripts inside Python_Programs (please check that all the csv files and Zoo.db are placed in "C:\Source_data\").
 - Warehouse inspection can be done using DB Browser for SQLite or any compatible SQL tool.
