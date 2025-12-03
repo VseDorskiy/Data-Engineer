@@ -17,14 +17,14 @@ Repository Structure
 │
 ├─ Aufgabe/                      # Original project task and instructions
 │
-├─ Zoo.db                        # SQL warehouse prototype containing all modeled tables and sample data
+├─ Zoo.db                        # SQL warehouse prototype containing all modeled tables and sample data. File .sqpbro - project copy in SQLite format
 ├─ Data_Dictionary.xlsx          # Detailed description of tables, attributes, and data types
 ├─ ERM-Schema                    # Entity-relationship model showing relationships among all parties
 ├─ Projectpräsentation.pdf       # Presentation: objectives, tools, ERM schema, SQL warehouse, data migration, next steps
 
 Main Files
 
-- Zoo.db
+- Zoo.db and Zoo.sqbpro (with all the queries)
 SQLite-based data warehouse filled with sample data representing all operational processes.
 
 - Data_Dictionary.xlsx
@@ -37,6 +37,6 @@ Complete entity-relationship diagram showing all participants and relationships.
 Explains scope, objectives, modelling decisions, ETL workflow, warehouse structure, data quality checks, and recommended next development steps.
 
 Usage Notes
-- SQL queries can be run directly from Zoo.db file.
+- SQL queries can be run directly from Zoo.sqbpro file.
 - ETL can be reproduced by executing Python scripts inside Python_Programms.
-- Warehouse inspection can be done using SQLite or any compatible SQL tool.
+- Warehouse inspection can be done using DB Browser for SQLite or any compatible SQL tool.
