@@ -9,17 +9,28 @@ Project Overview
 
 Repository Structure
 .
+
 ├─ Operative Datenbank/          # SQL-based warehouse (SQLite) with example data
+
 │   ├─ 01_Source_data/           # Example CSV files used as input for ETL
+
 │   ├─ 02_Create_Tables_Zoo.sql  # SQL Scripts for tables creation
+
 │   ├─ 03_Python_Programs/       # Python scripts for automated ETL, data loading, and validation
+
 │   └─ 04_Queries/               # SQL queries illustrating entity relationships and analytics logic
+
 │
+
 ├─ Aufgabe/                      # Original project task and instructions
+
 │
 ├─ Zoo.db                        # SQL warehouse prototype containing all modeled tables and sample data. File .sqpbro - project copy in SQLite format
+
 ├─ Data_Dictionary.xlsx          # Detailed description of tables, attributes, and data types
+
 ├─ ERM-Schema                    # Entity-relationship model showing relationships among all parties
+
 ├─ Projectpräsentation.pdf       # Presentation: objectives, tools, ERM schema, SQL warehouse, data migration, next steps
 
 Main Files
