@@ -25,6 +25,7 @@ Repository Structure
 ├─ Aufgabe/                      # Original project task and instructions
 
 │
+
 ├─ Zoo.db                        # SQL warehouse prototype containing all modeled tables and sample data. File .sqpbro - project copy in SQLite format
 
 ├─ Data_Dictionary.xlsx          # Detailed description of tables, attributes, and data types
