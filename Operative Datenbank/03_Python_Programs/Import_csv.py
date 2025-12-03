@@ -5,6 +5,9 @@ import re
 from contextlib import contextmanager
 from datetime import datetime
 
+pfad = "C:\\Source_data\\"
+db_name = 'Zoo.db'
+
 
 @contextmanager
 def change_dir(destination):
@@ -16,14 +19,14 @@ def change_dir(destination):
         os.chdir(cwd)
 
 
-class Create_Database_from_CSV:
-"""
- - Inserts Data from CSV-file
- - Fixes the problems with number-format data:
-    makes integer-number from string with numbers (without other symbols)
-    makes float-number from string with numbers with '.' or ',' correct format -> "12.234"
-    fixes datetime issues, convert "1/12/2012" and "1.12.2012" to "2012-12-01"  
-"""
+class CreateDatabaseFromCSV:
+    """
+     - Inserts Data from CSV-file
+     - Fixes the problems with number-format data:
+        makes integer-number from string with numbers (without other symbols)
+        makes float-number from string with numbers with '.' or ',' correct format -> "12.234"
+        fixes datetime issues, convert "1/12/2012" and "1.12.2012" to "2012-12-01"  
+    """
 
     def __init__(self, file_name, db_name):
         self.connection = None
@@ -72,11 +75,11 @@ class Create_Database_from_CSV:
         d = None
         f = f.strip()
         try:
-            if bool(re.match('[0-9]+$',f)):                             # check if it's an integer number
+            if bool(re.match('[0-9]+$', f)):                             # check if it's an integer number
                 d = int(f)
-            elif bool(re.match('[0-9,.]+$',f)) and f.count('.') < 2 \
+            elif bool(re.match('[0-9,.]+$', f)) and f.count('.') < 2 \
                     and f.count(',') < 2:                               # check if it's a float number
-                d = float(f.replace(",","."))
+                d = float(f.replace(",", "."))
 
             elif bool(re.match('[0-9./: ]+$', f)):                      # check if it's a datetime
                 d = self.fix_datetimeformat(f)
@@ -110,6 +113,7 @@ class Create_Database_from_CSV:
                 field_names.append(field.strip())
 
     #------------------------------------Create Table------------------------------------------
+            
             self.connection = sqlite3.connect(self.db_name)
 
             # sql_drop_table = f"DROP TABLE IF EXISTS {table_name};"
@@ -140,11 +144,11 @@ class Create_Database_from_CSV:
 
                 self.sql_execute(insert_row_data)
 
-            print(f"Table \'{table_name}\' in \'{self.db_name}\' is ready to use!\n")
+            print(f"Table \'{table_name}\' in \'{self.db_name}\' is ready to use!\n")            
 
 
-pfad = "C:\\DE_Projekt\\Source_data\\"
-db_name = 'Zoo.db'
+# -----------------------------------Fill the Tables --------------------------------------
+
 
 with change_dir(pfad):
     if __name__ == "__main__":
@@ -156,9 +160,7 @@ with change_dir(pfad):
                 list_of_files.append(file)
 
         for file_name in list_of_files:
-            Create_Database_from_CSV(file_name, db_name)
+            CreateDatabaseFromCSV(file_name, db_name)
 
         print("Number of files: ", len(list_of_files))
-
-        # Create_Database_from_CSV('Krankheitsfall.csv', db_name)
 

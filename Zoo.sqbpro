@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="C:\Users\Vsevolod Dorskiy\Desktop\For GITHUB\Data Engineer\Zoo.db" readonly="0" foreign_keys="1" case_sensitive_like="0" temp_store="0" wal_autocheckpoint="1000" synchronous="2"/><attached/><window><main_tabs open="structure browser pragmas query" current="3"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="250"/><column_width id="3" width="11865"/><column_width id="4" width="0"/><expanded_item id="0" parent="1"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><current_table name="4,6:mainAnrede"/><default_encoding codec=""/><browse_table_settings><table schema="main" name="Anrede" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="180"/><column index="2" value="232"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table></browse_table_settings></tab_browse><tab_sql><sql name="01_SELECT Tiere.sql">select Tiername, 
+	Geschlecht_Tiere.Bezeichnung, 
+	Groesse, Einheiten_Groesse_Tiere.Bezeichnung, 
+	Gewicht, Einheiten_Gewicht_Tiere.Bezeichnung,
+	Tierart.TierartBezeichnung, Gattung.GattungsBezeichnung
+	from Tiere
+join Geschlecht_Tiere on Geschlecht_Tiere.GeschlechtTierID  = Tiere.GeschlechtTierID 
+join Einheiten_Groesse_Tiere on Einheiten_Groesse_Tiere.EinheitGroesseTierID = Tiere.EinheitGroesseTierID
+join Einheiten_Gewicht_Tiere on Einheiten_Gewicht_Tiere.EinheitGewichtTierID = Tiere.EinheitGewichtTierID
+join Tierart on Tierart.TierartID = Tiere.TierartID
+join Gattung on Gattung.GattungID = Tierart.GattungID
+</sql><sql name="02_SELECT Arzt.sql">SELECT 
+	Titel.Bezeichnung as Titel,
+	Anrede.Bezeichnung as Anrede,
+	Arzt.Vorname,
+	Arzt.Nachname,
+	Arzt.Strasse,
+	Arzt.Hausnummer,
+	Arzt.PLZ,
+	Arzt.Ort,
+	Arzt.Telefonnummer,
+	Arzt.E_Mail
+FROM Arzt
+JOIN Titel on Titel.TitelID = Arzt.TitelID
+JOIN Anrede on Anrede.AnredeID = Arzt.AnredeID
+Join Land on Land.LandID = Arzt.LandID</sql><sql name="03_SELECT Aerzte-Tiere.sql">SELECT Tiere.Tiername, Tierart.TierartBezeichnung, count(Zuordnung_Arzt_Tier.ArztID) as 'Anzahl der Ärzte'
+      --, Arzt.Vorname, Arzt.Nachname 
+FROM Arzt
+
+JOIN Zuordnung_Arzt_Tier on Zuordnung_Arzt_Tier.ArztID = Arzt.ArztID
+JOIN Tiere on Zuordnung_Arzt_Tier.TierID = Tiere.TierID
+JOIN Tierart on Tierart.TierartID = Tiere.TierartID
+GROUP BY Tiere.Tiername</sql><sql name="04_SELECT Tiere-Krankheitsfall.sql">SELECT Tiere.Tiername,
+	Tierart.TierartBezeichnung as Tierart,
+	Tiere.Geburtsdatum,
+	Krankheitsfall.Behandlungsgrund,
+	Krankheitsfall.Behandlungsdatum, 
+	Krankheitsfall.Behandlung_abgeschlossen_am,
+	Krankheitsfall.Medikation,	
+	Titel.Bezeichnung as Titel, 
+	Arzt.Vorname, 
+	Arzt.Nachname
+FROM Krankheitsfall
+join Arzt on Arzt.ArztID = Krankheitsfall.ArztID
+join Tiere on Tiere.TierID = Krankheitsfall.TierID
+join Tierart on Tierart.TierartID = Tiere.TierartID
+join Titel on Titel.TitelID = Arzt.TitelID
+
+</sql><sql name="05_SELECT Arzt-Vertretung.sql">SELECT distinct Arzt.Vorname as Arzt_Vorname,
+	Arzt.Nachname as Arzt_Nachname,	
+	Vertreter.Vorname as Vertreter_Vorname,
+	Vertreter.Nachname as Vertreter_Nachname,
+	--Tierart.TierartBezeichnung as Tierart,
+	Beginn,
+	Ende
+
+from Zuordnung_Vertretung_Arzt
+join Arzt on Arzt.ArztID = Zuordnung_Vertretung_Arzt.ArztID
+join Arzt as Vertreter on Vertreter.ArztID =  Zuordnung_Vertretung_Arzt.VertretungsnummerArztID
+JOIN Zuordnung_Arzt_Tier on Zuordnung_Arzt_Tier.ArztID = Arzt.ArztID
+JOIN Tiere on Zuordnung_Arzt_Tier.TierID = Tiere.TierID
+JOIN Tierart on Tierart.TierartID = Tiere.TierartID</sql><sql name="06_SELECT Tierehistorie-Krankheitsfall.sql">SELECT Tiere.Tiername,
+	Tierart.TierartBezeichnung as Tierart,
+	Ort, 
+	Land.Bezeichnung as Land,
+	von, 
+	bis,
+	Tiere.im_Zoo_seit,
+	Krankheitsfall.Behandlungsgrund, Behandlungsdatum,Behandlung_abgeschlossen_am
+FROM Tierhistorie
+join Tiere on Tiere.TierID = Tierhistorie.TierID
+join Land on Land.LandID = Tierhistorie.LandID
+join Tierart on Tierart.TierartID = Tiere.TierartID
+LEFT join Krankheitsfall on Krankheitsfall.TierID = Tiere.TierID
+;</sql><sql name="07_SELECT Tiere (Vater-Kinder).sql">SELECT Tier.Tiername as Vater, Tier.Geburtsdatum as 'Vater Geburtsdatum', 
+	Kind.Tiername as Kind, Kind.Geburtsdatum as 'Kind Geburtsdatum', 
+	Geschlecht_Tiere.Bezeichnung as 'Kind Geschlecht',
+	Tierart.TierartBezeichnung as Tierart
+	
+from Tiere as Tier
+join Tiere as Kind ON Tier.TierID = Kind.Vatertier
+join Tierart on Tierart.TierartID = Kind.TierartID
+join Geschlecht_Tiere on Geschlecht_Tiere.GeschlechtTierID = Kind.GeschlechtTierID</sql><sql name="08_SELECT Tiere-Inkompatibilitaeten.sql">SELECT distinct 
+		--Aktiv.Tiername as Tier1,
+		Aktiv_Tierart.TierartBezeichnung As 'Tierart1',
+		--Passiv.Tiername as Tier2,
+		Passiv_Tierart.TierartBezeichnung As 'Tierart2'
+		
+from Inkompatibilitaeten
+join Tiere as Passiv on Passiv.TierID = Inkompatibilitaeten.TierID_passiv
+join Tiere as Aktiv on  Aktiv.TierID = Inkompatibilitaeten.TierID_aktiv
+join Tierart as Aktiv_Tierart on Aktiv_Tierart.TierartID = Aktiv.TierartID
+join Tierart as Passiv_Tierart on Passiv_Tierart.TierartID = Passiv.TierartID;
+</sql><sql name="09_SELECT Tierart_VerwandteTierart.sql">select 
+	Tier.TierartBezeichnung as Tierart, 
+	Verwandte.TierartBezeichnung as 'Verwandte Tierart'
+from Zuordnung_Tierart_Tierart
+join Tierart as Tier ON Tier.TierartID = Zuordnung_Tierart_Tierart.TierartID
+join Tierart as Verwandte ON Verwandte.TierartID = Zuordnung_Tierart_Tierart.Verwandte_Arten</sql><sql name="10_SELECT Tiere - Futter.sql">select distinct Tiere.Tiername, Tierart.TierartBezeichnung as Tierart, 
+Mahlzeit.Bezeichnung as Futter--Mahlzeit_Futter.Menge, Einheit_Futtermenge.Bezeichnung
+from Tiere
+
+JOIN Fuetterung on Tiere.TierID = Fuetterung.TierID
+JOIN Mahlzeit on Mahlzeit.MahlzeitID = Fuetterung.MahlzeitID
+Join Tierart on Tierart.TierartID = Tiere.TierartID
+join Mahlzeit_Futter on Mahlzeit_Futter.MahlzeitID = Mahlzeit.MahlzeitID
+join Einheit_Futtermenge on Einheit_Futtermenge.EinheitFuttermengeID = Mahlzeit_Futter.EinheitFuttermengeID
+</sql><sql name="11_SELECT Futter-Futterzutaten (Futtermischung).sql">select distinct --Tiere.Tiername, Tierart.TierartBezeichnung, Gattung.GattungsBezeichnung,
+Mahlzeit.Bezeichnung as Futtermischung, Mahlzeit_Futter.Menge, Einheit_Futtermenge.Bezeichnung as Einheit, 
+Futter.Bezeichnung as Futter, Futterarten.Futterartbezeichnung as Futterart
+from Fuetterung
+
+JOIN Tiere on Tiere.TierID = Fuetterung.TierID
+JOIN Mahlzeit on Mahlzeit.MahlzeitID = Fuetterung.MahlzeitID
+Join Tierart on Tierart.TierartID = Tiere.TierartID
+join Mahlzeit_Futter on Mahlzeit_Futter.MahlzeitID = Mahlzeit.MahlzeitID
+join Einheit_Futtermenge on Einheit_Futtermenge.EinheitFuttermengeID = Mahlzeit_Futter.EinheitFuttermengeID
+join Gattung on Gattung.GattungID = Tierart.GattungID
+join Futter on Futter.FutterID = Mahlzeit_Futter.FutterID
+join Futterarten on Futterarten.FutterartID = Futter.FutterartID
+WHERE Gattung.GattungsBezeichnung LIKE '%Großkatzen'</sql><sql name="12_SELECT Lieferant-Futter.sql">select Lieferanten.Firmenname, Futter.Bezeichnung as Futter, Futterarten.Futterartbezeichnung as Futterart,
+		Futter_Lieferanten.Menge, Einheit_Futtermenge.Bezeichnung as Einheit,
+		Futter_Lieferanten.'Preis_(EK)_netto', 
+		Futter_Lieferanten.Menge*Futter_Lieferanten.'Preis_(EK)_netto' as 'Gesamtpreis netto',
+		Waehrung.Bezeichnung as 'Währung', Futter_Lieferanten.Datum as Lieferungsdatum
+from Futter_Lieferanten
+
+join Futter on Futter.FutterID = Futter_Lieferanten.FutterID
+join Lieferanten on Lieferanten.LieferantenID = Futter_Lieferanten.LieferantenID
+join Futterarten on Futterarten.FutterartID = Futter.FutterartID
+join Einheit_Futtermenge on Einheit_Futtermenge.EinheitFuttermengeID = Futter_Lieferanten.EinheitFuttermengeID
+join Waehrung on Waehrung.WaehrungID = Futter_Lieferanten.WaehrungID
+WHERE Datum &gt; '2023-05-01'
+</sql><sql name="13_SELECT Futterlager Bestand.sql">select Gebaeude.GebaeudeID as 'Gebäude Nr.',
+	   Gebaeude.Groesse_in_qm as 'Gebäudegröße in qm', 
+	   Futter.Bezeichnung as Futter,
+	   Futterarten.Futterartbezeichnung as Futterart,
+	   Futterlager.Aktuellebestand,
+	   Futterlager.Meldebestand,
+	   Einheit_Futtermenge.Bezeichnung as Einheit,
+	   Futterlager.Datum,
+	   Futterlager.Uhrzeit
+	   
+FROM Futterlager
+	   
+join Gebaeude on Gebaeude.GebaeudeID = Futterlager.GebaeudeID
+join Futter on Futter.FutterID = Futterlager.FutterID
+join Futterarten on Futterarten.FutterartID = Futter.FutterartID
+join Einheit_Futtermenge ON Einheit_Futtermenge.EinheitFuttermengeID = Futterlager.EinheitFuttermengeID</sql><sql name="14_SELECT Mitarbieter.sql">select Titel.Bezeichnung AS Titel, Anrede.Bezeichnung AS Anrede, Vorname, Nachname, Positionen.Bezeichnung AS Position,
+		Mitarbeiter.Strasse, Hausnummer, Mitarbeiter.Ort, PLZ.PLZ 
+		from Mitarbeiter
+JOIN Titel On Titel.TitelID = Mitarbeiter.TitelID
+JOIN Anrede on Anrede.AnredeID = Mitarbeiter.AnredeID
+JOIN PLZ ON PLZ.PLZID = Mitarbeiter.PLZID
+JOIN Positionen on Positionen.PositionID = Mitarbeiter.PositionID
+</sql><sql name="15_SELECT Mitarbieter-Tier-Pflege.sql">SELECT --Mitarbeiter.Vorname, Mitarbeiter.Nachname, Positionen.Bezeichnung,
+	Tiere.Tiername, Tierart.TierartBezeichnung, count(Mitarbeiter.MitarbeiterID) as 'Anzahl der Mitarbeiter'
+from Pflegetaetigkeit_Tier
+join Mitarbeiter on Mitarbeiter.MitarbeiterID = Pflegetaetigkeit_Tier.MitarbeiterID
+join Tiere on Tiere.TierID = Pflegetaetigkeit_Tier.TierID
+Join Tierart on Tierart.TierartID = Tiere.TierartID
+join Positionen on Positionen.PositionID  = Mitarbeiter.PositionID
+group by Tiere.Tiername
+order by count(Mitarbeiter.MitarbeiterID) DESC</sql><sql name="16_SELECT Mitarbeiter-Vertretung.sql">select Mitarbeiter.Vorname as Mitarbeiter_Vorname,
+	Mitarbeiter.Nachname as Mitarbeiter_Nachname,
+	Vertreter.Vorname as Vertreter_Vorname,	 
+	Vertreter.Nachname as Vertreter_Nachname,
+	Vertretungsgrund.Bezeichnung as Vertretungsgrund,
+	Beginn,
+	Ende
+from Zuordnung_Vertretung
+join Mitarbeiter on Mitarbeiter.MitarbeiterID = Zuordnung_Vertretung.MitarbeiterID
+join Mitarbeiter as Vertreter on Vertreter.MitarbeiterID = Zuordnung_Vertretung.VertreterID
+join Vertretungsgrund on Vertretungsgrund.VertretungsgrundID = Zuordnung_Vertretung.VertretungsgrundID</sql><sql name="17_SELECT Rundweg-Gehege.sql">select distinct
+ Rundweg.Bezeichnung as Rundweg,
+ ja_nein.Bezeichnung as Barrierfrei,
+ Rundweg.Laenge_in_meter as 'Länge in m',
+ Rundweg.Geehdauer_in_minuten as 'Gehdauer in min',
+ Gehege.Bezeichnung as 'Gehege'
+	
+
+from Zuordnung_Gehege_Tier_Rundweg
+
+join Rundweg on Rundweg.RundwegID = Zuordnung_Gehege_Tier_Rundweg.RundwegID
+join Zuordnung_Gehege_Tier on  Zuordnung_Gehege_Tier.ZuordnungGehegeTierID = Zuordnung_Gehege_Tier_Rundweg.ZuordnungGehegeTierID
+join Gehege on Gehege.GehegeID = Zuordnung_Gehege_Tier.GehegeID
+join ja_nein on ja_nein.ja_neinID = Rundweg.Barrierfrei</sql><sql name="18_SELECT Gehege-Gebaeude.sql">SELECT    Gehege.Bezeichnung as Gehege,
+		  Gebaeude.GebaeudeID as 'Gebäude Nr.',
+		  Gebaeude.Lage as 'Gebäude Lage',  
+		  Gebaeude.Groesse_in_qm as 'Gebäudegröße in qm',
+		  Gebaeude.Etagen as 'Anzahl der Etagen in Gebäude'
+		
+
+from Zuordnung_Gehege_Gebaeude
+join Gehege on Gehege.GehegeID = Zuordnung_Gehege_Gebaeude.GehegeID
+join Gebaeude on Gebaeude.GebaeudeID = Zuordnung_Gehege_Gebaeude.GebaeudeID;</sql><current_tab id="0"/></tab_sql></sqlb_project>
