@@ -8,6 +8,7 @@ Project Overview
 - ETL procedures are automated using Python, ensuring reproducible loading, transformation, and validation of the source data.
 
 Repository Structure
+
 .
 
 ├─ Operative Datenbank/          # SQL-based warehouse (SQLite) with example data
@@ -33,6 +34,7 @@ Repository Structure
 ├─ ERM-Schema                    # Entity-relationship model showing relationships among all parties
 
 ├─ Projectpräsentation.pdf       # Presentation: objectives, tools, ERM schema, SQL warehouse, data migration, next steps
+
 
 Main Files
 
