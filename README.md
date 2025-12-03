@@ -37,16 +37,16 @@ Repository Structure
 
 
 Main Files
-- Zoo.db and Zoo.sqbpro (Zoo.db with all the queries)
+- Zoo.db and Zoo.sqbpro (Zoo.db with all the queries) - 
 SQLite-based data warehouse filled with sample data representing all operational processes.
 
-- Data_Dictionary.xlsx
+- Data_Dictionary.xlsx - 
 Documented table descriptions, field meanings, and data types.
 
-- ERM-Schema
+- ERM-Schema - 
 Complete entity-relationship diagram showing all participants and relationships.
 
-- Project_Presentation.pdf
+- Project_Presentation.pdf - 
 Explains scope, objectives, modelling decisions, ETL workflow, warehouse structure, data quality checks, and recommended next development steps.
 
 Usage Notes
