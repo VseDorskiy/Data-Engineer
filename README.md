@@ -37,7 +37,7 @@ Repository Structure
 
 
 Main Files
-- Zoo.db and Zoo.sqbpro (with all the queries)
+- Zoo.db and Zoo.sqbpro (Zoo.db with all the queries)
 SQLite-based data warehouse filled with sample data representing all operational processes.
 
 - Data_Dictionary.xlsx
