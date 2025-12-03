@@ -7,6 +7,7 @@ Project Overview
 - Processes such as animal care, employee assignments, logistics, facility management, and service operations are reflected in the schema.
 - ETL procedures are automated using Python, ensuring reproducible loading, transformation, and validation of the source data.
 
+
 Repository Structure
 
 .
@@ -37,7 +38,6 @@ Repository Structure
 
 
 Main Files
-
 - Zoo.db and Zoo.sqbpro (with all the queries)
 SQLite-based data warehouse filled with sample data representing all operational processes.
 
