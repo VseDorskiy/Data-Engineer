@@ -8,6 +8,7 @@ Project Overview
 - ETL procedures are automated using Python, ensuring reproducible loading, transformation, and validation of the source data.
 
 
+
 Repository Structure
 
 .
@@ -37,6 +38,7 @@ Repository Structure
 ├─ Projectpräsentation.pdf       # Presentation: objectives, tools, ERM schema, SQL warehouse, data migration, next steps
 
 
+
 Main Files
 - Zoo.db and Zoo.sqbpro (with all the queries)
 SQLite-based data warehouse filled with sample data representing all operational processes.
@@ -49,6 +51,7 @@ Complete entity-relationship diagram showing all participants and relationships.
 
 - Projectpräsentation.pdf
 Explains scope, objectives, modelling decisions, ETL workflow, warehouse structure, data quality checks, and recommended next development steps.
+
 
 Usage Notes
 - SQL queries can be run directly from Zoo.sqbpro file.
