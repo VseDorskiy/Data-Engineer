@@ -35,6 +35,8 @@ Repository Structure
 
 ├─ Project_Presentation.pdf       # Presentation: objectives, tools, ERM schema, SQL warehouse, data migration, next steps
 
+├─ Project_Description.pdf       # Description of the project: objectives, tools, structure, skills acquired
+
 
 Main Files
 - Zoo.db and Zoo.sqbpro (Zoo.db with all the queries) - 
